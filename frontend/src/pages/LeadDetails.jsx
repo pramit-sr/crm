@@ -2,7 +2,7 @@ import axios from "axios";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const API_BASE = "http://localhost:5001/api";
+const API_BASE = "https://crm-vy9a.onrender.com/api";
 
 export default function LeadDetails() {
   const { id } = useParams();

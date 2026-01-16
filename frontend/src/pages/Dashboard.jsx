@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const API_BASE = "http://localhost:5001/api";
+const API_BASE = "https://crm-vy9a.onrender.com/api";
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ export default function Dashboard() {
     } catch (error) {
       console.error("Error fetching leads:", error);
       if (error.code === 'ECONNREFUSED' || error.message.includes('Network Error')) {
-        setError("Cannot connect to backend server. Please make sure the backend is running on port 5000.");
+        setError("Cannot connect to backend server. Please check your internet connection and try again.");
       } else {
         setError("Error loading leads. Please check the console for details.");
       }
